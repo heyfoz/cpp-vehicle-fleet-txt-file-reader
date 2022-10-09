@@ -11,7 +11,7 @@
 #include <fstream>  // To utilize ifstream, ofstream, fstream
 using namespace std;
 
-// Constant variable declaration
+// Constant Variable Initialization
 const string TITLE = "Fleet TXT File Input Program", AUTHOR_LINE = "By Forrest Moulin";
 
 const string TABLE_TITLE = "Forrest's Green Vehicle Fleet Report";
@@ -31,12 +31,13 @@ const int TABLE_WIDTH = COL1_WIDTH + COL4_WIDTH + COL5_WIDTH;
 
 int main()
 {
-	// Dynamic variable initialization
-	int fleetCount;
-	double miles, gal, avgMPG, worstMPG, bestMPG, totalGal, totalMiles, fleetAvgMPG;
+	// Dynamic Variable Initialization
+	int fleetCount = 0;
+	double miles, gal, avgMPG, worstMPG = 0.0, bestMPG = 0.0,
+		 totalMiles = 0.0, totalGal = 0.0, fleetAvgMPG;
 	string vehicleID, worstMPGStr, bestMPGStr, rowDivider = "-";
-	
-	string filePath = "C:\\Users\\Alias\\Path\\To\\FleetInput.txt";
+
+	string filePath = "C:\\Users\\Forrest\\OneDrive - The Pennsylvania State University\\FleetInput.txt";
 	// Create ifstream object to read the text file
 	ifstream inputFile;
 
@@ -56,12 +57,6 @@ int main()
 	{
 		rowDivider += "-";
 	}
-
-	fleetCount = 0;
-	worstMPG = 0.0;
-	bestMPG = 0.0;
-	totalMiles = 0.0;
-	totalGal = 0.0;
 
 	// Program Logic/Output with double precision fixed to 1 decimal
 	cout << fixed << setprecision(1)
