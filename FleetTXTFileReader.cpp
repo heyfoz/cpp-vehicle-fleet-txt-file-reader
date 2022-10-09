@@ -57,23 +57,16 @@ int main()
 	}
 
 	fleetCount = 0;
-	miles = 0.0;
-	gal = 0.0;
 	worstMPG = 0.0;
 	bestMPG = 0.0;
 	totalMiles = 0.0;
 	totalGal = 0.0;
-	avgMPG = 0.0;
-	fleetAvgMPG = 0.0;
-	vehicleID = "ABCDEFGHIJ";
-	worstMPGStr = "";
-	bestMPGStr = "";
 
 	// Program Logic/Output with double precision fixed to 1 decimal
 	cout << fixed << setprecision(1)
 		<< TITLE << endl << AUTHOR_LINE << endl << endl
+		// Table output
 		<< right << setw((TABLE_WIDTH - TABLE_TITLE.length()) / 2 + TABLE_TITLE.length())
-		
 		<< TABLE_TITLE << endl << rowDivider << endl 
 		<< left << setw(COL1_WIDTH) << TABLE_HEAD1 
 		<< left << setw(COL2_WIDTH) << TABLE_HEAD2 
@@ -85,6 +78,7 @@ int main()
 	// set the variables to the read values.
 	while (inputFile >> vehicleID >> miles >> gal)
 	{
+		// Calculate MPG and add values to totals
 		avgMPG = miles / gal;
 		totalGal += gal;
 		totalMiles += miles;
@@ -107,6 +101,8 @@ int main()
 			bestMPG = avgMPG;
 			bestMPGStr = vehicleID;
 		}
+		// Print the read variables found on each line
+		// as well as the calculated MPG
 		cout << left << setw(COL1_WIDTH) << vehicleID
 			<< left << setw(COL2_WIDTH) << miles
 			<< left << setw(COL3_WIDTH) << gal
@@ -117,7 +113,7 @@ int main()
 	// Calculate average mpg of the fleet
 	fleetAvgMPG = totalMiles / totalGal;
 
-
+	// Print fleet summary to console
 	cout  << rowDivider << endl
 		<< left << setw(COL5_WIDTH) << COUNT_STR << fleetCount << endl
 		<< left << setw(COL5_WIDTH) << MILES_STR << totalMiles << endl
@@ -132,3 +128,32 @@ int main()
 		<< left << setw(COL4_WIDTH) << bestMPG << endl
 		<< rowDivider << endl;
 }
+/*
+* CONSOLE OUTPUT
+* By Forrest Moulin
+*
+*      Forrest's Green Vehicle Fleet Report
+* ----------------------------------------------
+* Vehicle ID   Miles   Gallons   MPG
+* ----------------------------------------------
+* 279BX6KY2Z   582.2   20.5      28.4
+* 802MX8BZ4Q   723.6   25.1      28.8
+* 671AY6DZ3N   756.9   27.5      27.5
+* 845DH6AJ3B   660.2   25.4      26.0
+* 566GJ6KV2U   510.2   30.8      16.6
+* 109QW2RP2Y   301.2   8.3       36.3
+* 135TR4YC6H   387.6   12.2      31.8
+* 122AC6UG7P   228.9   14.7      15.6
+* 136VW8TD2Z   331.2   19.1      17.3
+* 448WQ2DX1M   543.9   33.6      16.2
+* 721GZ1LJ5N   629.8   27.9      22.6
+* 779FS3MB4Y   651.2   28.4      22.9
+* 553SB5LK8O   444.4   26.8      16.6
+* ----------------------------------------------
+* Fleet Count:              13
+* Total Miles:              6751.3
+* Average MPG:              22.5
+* Vehicle ID - Worst MPG:   122AC6UG7P   15.6
+* Vehicle ID - Best MPG:    109QW2RP2Y   36.3
+* ----------------------------------------------
+*/
