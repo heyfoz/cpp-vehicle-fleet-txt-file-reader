@@ -36,8 +36,8 @@ int main()
 	int fleetCount;
 	double miles, gal, avgMPG, worstMPG, bestMPG, totalGal, totalMiles, fleetAvgMPG;
 	string vehicleID, worstMPGStr, bestMPGStr, rowDivider = "-";
-
-	string filePath = "C:\\Users\\Forrest\\OneDrive - The Pennsylvania State University\\FleetInput.txt";
+	
+	string filePath = "C:\\Users\\Alias\\Path\\To\\FleetInput.txt";
 	ifstream inputFile;
 
 	inputFile.open(filePath);
