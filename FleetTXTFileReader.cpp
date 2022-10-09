@@ -37,6 +37,7 @@ int main()
 	string vehicleID, worstMPGStr, bestMPGStr, rowDivider = "-";
 	
 	string filePath = "C:\\Users\\Alias\\Path\\To\\FleetInput.txt";
+	// Create ifstream object to read the text file
 	ifstream inputFile;
 
 	inputFile.open(filePath);
@@ -44,6 +45,7 @@ int main()
 	{
 		cout << "File open failure:" << endl
 			<< filePath << endl;
+		// Redudant measure to ensure file is closed
 		inputFile.close();
 		// End program in the event of file loading failure
 		return 0;
