@@ -11,7 +11,7 @@
 #include <fstream>  // To utilize ifstream, ofstream, fstream
 using namespace std;
 
-// Constant Variable Initialization
+// Constant variable declaration
 const string TITLE = "Fleet TXT File Input Program", AUTHOR_LINE = "By Forrest Moulin";
 
 const string TABLE_TITLE = "Forrest's Green Vehicle Fleet Report";
@@ -31,7 +31,7 @@ const int TABLE_WIDTH = COL1_WIDTH + COL4_WIDTH + COL5_WIDTH;
 
 int main()
 {
-	// Dynamic Variable Initialization
+	// Dynamic variable initialization
 	int fleetCount;
 	double miles, gal, avgMPG, worstMPG, bestMPG, totalGal, totalMiles, fleetAvgMPG;
 	string vehicleID, worstMPGStr, bestMPGStr, rowDivider = "-";
