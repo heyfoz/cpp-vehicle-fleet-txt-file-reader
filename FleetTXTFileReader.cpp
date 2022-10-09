@@ -110,6 +110,7 @@ int main()
 			<< left << setw(COL4_WIDTH) << avgMPG
 			<< endl;
 	}
+	// Close the file once all lines are read
 	inputFile.close();
 	// Calculate average mpg of the fleet
 	fleetAvgMPG = totalMiles / totalGal;
