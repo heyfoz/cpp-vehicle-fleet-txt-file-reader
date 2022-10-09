@@ -7,7 +7,6 @@
 
 #include <iostream> // To use cin/cout
 #include <iomanip>  // To access setw for output width
-#include <cmath>    // To access power function for calculations
 #include <string>   // To implement to_string() & length() functions
 #include <fstream>  // To utilize ifstream, ofstream, fstream
 using namespace std;
