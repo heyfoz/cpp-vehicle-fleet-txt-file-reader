@@ -57,7 +57,6 @@ int main()
 	{
 		rowDivider += "-";
 	}
-
 	// Program Logic/Output with double precision fixed to 1 decimal
 	cout << fixed << setprecision(1)
 		<< TITLE << endl << AUTHOR_LINE << endl << endl
@@ -69,7 +68,6 @@ int main()
 		<< left << setw(COL3_WIDTH) << TABLE_HEAD3
 		<< left << setw(COL4_WIDTH) << TABLE_HEAD4 
 		<< endl << rowDivider << endl;
-
 	// While there are lines to read in the file,
 	// set the variables to the read values.
 	while (inputFile >> vehicleID >> miles >> gal)
