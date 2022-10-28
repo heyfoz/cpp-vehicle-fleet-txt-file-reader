@@ -6,3 +6,5 @@ Then, the program calculates the fleet average and individual average miles per 
 Additionally, the program identifies the worst and best MPG in the fleet.
 
 Link to .cpp file: <a href="https://github.com/ffm5113/cpp_vehicle_fleet_txt_file_reader/blob/main/FleetTXTFileReader.cpp">Vehicle Fleet Text File Reader C++ Program</a>
+
+Copyright (c) 2022 ffm5113
