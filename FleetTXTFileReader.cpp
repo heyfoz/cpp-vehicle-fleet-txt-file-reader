@@ -37,7 +37,7 @@ int main()
 		 totalMiles = 0.0, totalGal = 0.0, fleetAvgMPG;
 	string vehicleID, worstMPGStr, bestMPGStr, rowDivider = "-";
 
-	string filePath = "C:\\Users\\Forrest\\OneDrive - The Pennsylvania State University\\FleetInput.txt";
+	string filePath = "C:\\Users\\UserName\\Path\\To\\File.txt";
 	// Create ifstream object to read the text file
 	ifstream inputFile;
 
